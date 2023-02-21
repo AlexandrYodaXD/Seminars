@@ -20,7 +20,6 @@ public class Task_3 {
         while (iterator.hasNext()){
             String current = iterator.next();
             if (isParable(current)){
-                Integer.parseInt(current);
                 iterator.remove();
             } else {
                 System.out.printf("\"%s\" - это было не число...\n", current);
@@ -28,7 +27,6 @@ public class Task_3 {
         }
         System.out.println(arr);
     }
-
 
     public static Boolean isParable(String number){
         try {

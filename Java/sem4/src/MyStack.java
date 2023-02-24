@@ -1,10 +1,13 @@
-import java.util.Arrays;
-
 //size(), empty(), push(), peek(), pop().
-public class myStack {
+public class MyStack {
 
     private int[] arr = new int[10];
     private int length = 0;
+
+    MyStack(){
+        arr = new int[10];
+        length = 0;
+    }
 
     int size(){
         return length;

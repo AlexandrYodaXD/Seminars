@@ -5,7 +5,7 @@ size(), empty(), push(), peek(), pop().
  */
 public class Task_4 {
     public static void main(String[] args) {
-        myStack stack = new myStack();
+        MyStack stack = new MyStack();
         System.out.println(stack.size());
         stack.push(5);
         System.out.println(stack.size());

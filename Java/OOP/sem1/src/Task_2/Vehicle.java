@@ -1,7 +1,5 @@
 package Task_2;
-/*
-цвет, модель, количество колёс, вес и скорость а так же метод ехать
- */
+
 public class Vehicle {
     protected String model;
     protected String color;

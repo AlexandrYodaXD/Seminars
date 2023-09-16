@@ -7,7 +7,7 @@ public class Program {
         String res1 = toJson(123);
         String res2 = toJson("Строка");
         String res3 = toJson(new cat.Cat("Barsik", 5, "Siam"));
-        String res4 = toJson(3.14);
+        String res4 = toJson('1');
 
         System.out.println(res1);
         System.out.println(res2);
@@ -30,16 +30,14 @@ public class Program {
             Iterator<Field> iterator = Arrays.stream(obj.getClass().getDeclaredFields()).iterator();
             while (iterator.hasNext()){
                 Field field = iterator.next();
-//                field.setAccessible(true);
+                field.setAccessible(true);
                 try {
                     sb.append("\"")
                             .append(field.getName())
                             .append("\": ");
                     Object fieldValue = field.get(obj);
                     sb.append(fieldValue);
-                } catch (IllegalAccessException e) {
-
-                }
+                } catch (IllegalAccessException ignored) {}
                 if (iterator.hasNext()) sb.append(", ");
             }
         }
